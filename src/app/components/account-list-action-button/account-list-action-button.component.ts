@@ -8,11 +8,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class AccountListActionButtonComponent {
 
   @Input() title: String;
-  @Output() requestMore: EventEmitter<any> = new EventEmitter();
+  @Output() theAction: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
-  loadMore = ():void => {
-    this.requestMore.emit();
+  doAction = ():void => {
+    this.theAction.emit();
   }
 }

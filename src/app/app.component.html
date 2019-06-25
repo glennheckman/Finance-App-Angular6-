@@ -6,4 +6,4 @@
 
 <fin-account-list [accountList]="accountList"></fin-account-list>
 
-<fin-account-list-action-button *ngIf="recordsRemaining>0" (requestMore)="loadMoreAccounts($event)" title="Load More"></fin-account-list-action-button>
+<fin-account-list-action-button *ngIf="recordsRemaining>0" (theAction)="loadMoreAccounts($event)" title="Load More"></fin-account-list-action-button>
