@@ -1,0 +1,22 @@
+ <li id="account-list-item">
+   <div class="left">
+      <div class="title">
+        {{account.name}}
+      </div>
+   </div>
+
+   <div class="right">
+    <div class="balance-container">
+      <div class="available">
+        {{account.available | currency }}
+      </div>
+      <div class="todays-change" [ngClass]="{
+          'loss':account.change.dir === 'negative',
+          'gain':account.change.dir === 'positive',
+          'even':account.change.dir === 'zero'
+        }">
+        {{account.change.dir | convertToSymbol}}{{account.change.percent/100 | number:'1.2'}}% / {{account.change.amount | currency}}
+      </div>
+    </div>
+   </div>  
+  </li>

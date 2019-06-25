@@ -1,0 +1,9 @@
+<fin-account-list-header 
+  (getAccounts)="getAccounts($event)"
+  [sortType]="currentSortType"
+  [sortAscOrder]="currentOrder">
+</fin-account-list-header>
+
+<fin-account-list [accountList]="accountList"></fin-account-list>
+
+<fin-account-list-action-button *ngIf="recordsRemaining>0" (requestMore)="loadMoreAccounts($event)" title="Load More"></fin-account-list-action-button>
